@@ -1,0 +1,56 @@
+{
+  "name": "react-image-drag-selector",
+  "version": "0.0.1",
+  "private": false,
+  "description": "drag and select a partial area of the image",
+  "module": "dist/react-image-drag-selector.js",
+  "main": "dist/react-image-drag-selector.js",
+  "repository": "https://github.com/Pre-Onboarding-FE-Team07/wanted-codestates-project-7-5-2.git",
+  "author": "jinyongp <dev.jinyongp@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "start:dev": "webpack serve --env development",
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src/lib --out-file dist/react-image-drag-selector.jsx",
+    "prepare": "husky install"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.5.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
